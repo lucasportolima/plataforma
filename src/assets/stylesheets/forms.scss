@@ -1,0 +1,126 @@
+/deep/ .field {
+    display: block;
+
+    .label {
+        color: $neutral-color-5;
+        font-size: $caption;
+        line-height: $lh-caption;
+        font-weight: $font-normal;
+        padding: 0 0;
+        font-family: $font-primary;
+    }
+
+    .input,
+    .control .input {
+        background: $white;
+        border-radius: 5px;
+        border: 1px solid $input-border-color;
+        box-shadow: none;
+        color: $neutral-color-1;
+        font-family: $font-primary;
+        font-weight: $font-normal;
+        margin-bottom: 10px;
+        height: 40px;
+
+        &.is-danger {
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            border: 1px solid $input-border-color-focus;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+
+        &:focus {
+            border: 1px solid $input-border-color-focus;
+        }
+    }
+
+    &.is-danger {
+        .control {
+            input {
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                border: 1px solid $input-border-color-focus;
+                transform: translate3d(0, 0, 0);
+                backface-visibility: hidden;
+                perspective: 1000px;
+                border-radius: 5px !important;
+                border: 1px solid $input-border-color-focus;
+                &:focus {
+                    border: 1px solid $input-border-color-focus;
+                }
+            }
+        }
+    }
+
+    .help {
+        margin-top: 0;
+        &.is-danger {
+            color: $black;
+            font-weight: $font-bold;
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+    }
+
+    @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+    }
+
+    span.icon {
+        i.mdi-eye {
+            font-style: normal;
+            font-size: 0px;
+            &:before {
+                content: '\e903';
+                font-size: 20px;
+                color: $neutral-color-1;
+                font-family: 'icomoon' !important;
+                padding: 4px 0 0;
+                display: block;
+            }
+        }
+
+        i.mdi-eye-off {
+            font-style: normal;
+            font-size: 0px;
+            &:before {
+                content: '\e902';
+                font-size: 20px;
+                color: $neutral-color-1;
+                font-family: 'icomoon' !important;
+                padding: 4px 0 0;
+                display: block;
+            }
+        }
+    }
+
+    .b-checkbox.checkbox {
+        font-size: $caption;
+        line-height: $lh-caption;
+        color: $neutral-color-1;
+
+        input[type=checkbox] + .check {
+            border-radius: 2px;
+            border: solid 2px $neutral-color-2;
+            box-shadow: none;
+        }
+
+        input[type=checkbox]:checked + .check {
+            background-color: $white;
+            border-color: $main-color-1;
+        }
+    }
+}

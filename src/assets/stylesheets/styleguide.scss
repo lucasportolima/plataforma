@@ -1,0 +1,82 @@
+// =============================================
+// Typography
+// =============================================
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+// Font Family
+$font-primary: 'Muli',
+sans-serif;
+$font-secondary: 'Muli',
+sans-serif;
+// Font Weight
+$font-black: 900;
+$font-bold: 700;
+$font-normal: 400;
+$font-light: 300;
+// Font Size
+$h2-desktop-resume: 24px;
+$h1-headline: 40px;
+$h2-headline: 30px;
+$h3-headline: 20px;
+$subtitle-1: 16px;
+$subtitle-2: 14px;
+$body-1: 16px;
+$body-2: 14px;
+$button: 16px;
+$button-small: 14px;
+$caption: 12px;
+$overline: 10px;
+// Line Height
+$lh-h1-headline: 48px;
+$lh-h2-headline: 36px;
+$lh-h3-headline: 24px;
+$lh-subtitle-1: 19px;
+$lh-subtitle-2: 17px;
+$lh-body-1: 19px;
+$lh-body-2: 17px;
+$lh-button: 19px;
+$lh-button-small: 17px;
+$lh-caption: 15px;
+$lh-overline: 12px;
+// =============================================
+// Color pallette
+// =============================================
+$gray-1: rgba(43,
+43,
+43,
+1);
+$blue-1: rgba(51,
+112,
+147,
+1);
+$gray-2: rgba(81,
+81,
+81,
+1);
+$blue-2: rgba(69,
+153,
+202,
+1);
+$font-color: rgba(232,
+232,
+232,
+1);
+$main-color-1: #CE181F;
+$main-color-2: #900E13;
+$main-color-3: #FE363E;
+$secondary-color-1: #1E1C1C;
+$secondary-color-2: #0D0C0C;
+$secondary-color-3: #4D4848;
+$neutral-color-1: #4A4A4A;
+$neutral-color-2: #CDCDCD;
+$neutral-color-3: #E0E0E0;
+$neutral-color-4: #F7F7F7;
+$neutral-color-5: #999999;
+$input-border-color: #D8D8D8;
+$input-border-color-focus: #4A4A4A;
+$black: #000000;
+$white: #ffffff;
+$error: #FF5D5D;
+$sucess: #00BF95;
+$attention: #FFC136;
+$information: #2175D6;
