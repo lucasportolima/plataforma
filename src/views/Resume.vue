@@ -81,6 +81,7 @@ export default {
 .resume {
   background-color: $gray-1;
   padding: 25px;
+  padding-top: 100px;
 
   .middle {
     margin-bottom: 30px;
