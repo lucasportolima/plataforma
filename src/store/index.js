@@ -2,12 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import createPersistedState from 'vuex-persistedstate'
-import currentPartner from '@/store/modules/current-partner'
-import partnerListings from '@/store/modules/partner-listings'
-import currentNews from '@/store/modules/current-news'
-import newsListings from '@/store/modules/news-listings'
-import assessmentsListings from '@/store/modules/assessments-listings'
-import featureContents from '@/store/modules/feature-contents'
 
 Vue.use(Vuex)
 
@@ -49,12 +43,6 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    currentPartner,
-    partnerListings,
-    assessmentsListings,
-    currentNews,
-    newsListings,
-    featureContents
   },
   plugins: [createPersistedState({
     key: 'EMBP',
