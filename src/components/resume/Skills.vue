@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <h2>Skills</h2>
+    <h2><i class="icon-clicker" /> Skills</h2>
     <BulmaAccordion
       class="my-accordion"
       dropdown
@@ -86,6 +86,16 @@ export default {
     font-weight: bold;
     color: $blue-1;
     font-size: $h2-desktop-resume;
+
+    i {
+      font-weight: bold;
+      font-size: $h2-desktop-resume;
+      margin-right: 10px;
+    }
+
+    i::before {
+      color: $blue-1;
+    }
   }
 
   .my-accordion {

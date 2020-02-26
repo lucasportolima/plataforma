@@ -3,17 +3,17 @@
     <ul>
       <li>
         <div>
-          <img src="~@/assets/images/portrait.svg" alt="">
+          <i class="icon-portrait" />
         </div>
       </li>
       <li>
         <div>
-          <img src="~@/assets/images/electronics.svg" alt="">
+          <i class="icon-electronics" />
         </div>
       </li>
       <li>
         <div>
-          <img src="~@/assets/images/clicker.svg" alt="">
+          <i class="icon-clicker" />
         </div>
       </li>
     </ul>
@@ -49,17 +49,18 @@ export default {
       div {
         position: relative;
 
-        img {
-          width: 100px;
+        i {
+          font-size: 100px;
           position: absolute;
           left: 0;
+          cursor: pointer;
         }
       }
     }
 
     li:nth-of-type(2) {
       div {
-        img {
+        i {
           top: 130px;
         }
       }
@@ -67,7 +68,7 @@ export default {
 
     li:nth-of-type(3) {
       div {
-        img {
+        i {
           top: 260px;
         }
       }

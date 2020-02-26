@@ -1,10 +1,10 @@
 <template>
   <div class="contact">
-    <h2>Contact</h2>
+    <h2><i class="icon-electronics" /> Contact</h2>
     <ul>
       <li class="columns">
         <div class="column is-2">
-          <img src="~@/assets/images/place.svg" alt="">
+          <i class="icon-place" />
         </div>
         <div class="column is-10">
           <p>Brasilia-DF Brasil</p>
@@ -12,15 +12,15 @@
       </li>
       <li class="columns">
         <div class="column is-2">
-          lp
+          <i class="icon-phone" />
         </div>
         <div class="column is-10">
-          <p>61-995352846</p>
+          <p>(61) 98482-2244</p>
         </div>
       </li>
       <li class="columns">
         <div class="column is-2">
-          lp
+          <i class="icon-mail2" />
         </div>
         <div class="column is-10">
           <p>lucasportolima@live.com</p>
@@ -31,7 +31,15 @@
     <ul>
       <li class="columns">
         <div class="column is-2">
-          lp
+          <i class="icon-instagram" />
+        </div>
+        <div class="column is-10">
+          <p>Instagram</p>
+        </div>
+      </li>
+      <li class="columns">
+        <div class="column is-2">
+          <i class="icon-linkedin2" />
         </div>
         <div class="column is-10">
           <p>linkedin</p>
@@ -39,7 +47,7 @@
       </li>
       <li class="columns">
         <div class="column is-2">
-          lp
+          <i class="icon-github" />
         </div>
         <div class="column is-10">
           <p>github</p>
@@ -47,7 +55,7 @@
       </li>
       <li class="columns">
         <div class="column is-2">
-          lp
+          <i class="icon-blog" />
         </div>
         <div class="column is-10">
           <p>blog</p>
@@ -55,7 +63,7 @@
       </li>
       <li class="columns">
         <div class="column is-2">
-          lp
+          <i class="icon-drawer" />
         </div>
         <div class="column is-10">
           <p>portifolio</p>
@@ -90,18 +98,29 @@ export default {
     font-weight: bold;
     color: $blue-1;
     font-size: $h2-desktop-resume;
+
+    i {
+      font-weight: bold;
+      font-size: $h2-desktop-resume;
+      margin-right: 10px;
+    }
+
+    i::before {
+      color: $blue-1;
+    }
   }
 
   ul {
     margin-top: 25px;
+    margin-left: 7.5px;
 
     li {
       height: 30px;
 
-      img {
-        width: 20px;
+      i {
+        color: $font-color;
         position: relative;
-        left: 5px;
+        top: 2px;
       }
 
       p {

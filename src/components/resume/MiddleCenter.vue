@@ -3,12 +3,12 @@
     <ul>
       <li>
         <div>
-          <img src="~@/assets/images/work.svg" alt="">
+          <i class="icon-work" />
         </div>
       </li>
       <li>
         <div>
-          <img src="~@/assets/images/laptop.svg" alt="">
+          <i class="icon-laptop" />
         </div>
       </li>
     </ul>
@@ -42,19 +42,21 @@ export default {
       div {
         width: 100%;
 
-        img {
-          width: 150px;
-          margin: auto;
+        i {
+          font-size: 150px;
+          text-align: center;
           display: block;
           right: 0;
+          color: $font-color;
+          cursor: pointer;
         }
       }
     }
 
     li:last-of-type {
       div {
-        img {
-          width: 260px;
+        i {
+          font-size: 260px;
         }
       }
     }

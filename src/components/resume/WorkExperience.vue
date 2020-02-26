@@ -1,6 +1,6 @@
 <template>
   <div class="work-experience">
-    <h2>work experience</h2>
+    <h2><i class="icon-work" /> work experience</h2>
     <ul>
       <li class="columns">
         <div class="column is-2">
@@ -57,6 +57,16 @@ export default {
     font-weight: bold;
     color: $blue-1;
     font-size: $h2-desktop-resume;
+
+    i {
+      font-weight: bold;
+      font-size: $h2-desktop-resume;
+      margin-right: 10px;
+    }
+
+    i::before {
+      color: $blue-1;
+    }
   }
 
   ul {
