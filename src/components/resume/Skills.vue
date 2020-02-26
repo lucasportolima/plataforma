@@ -152,6 +152,7 @@ export default {
 
     .card-header{
       box-shadow: none !important;
+      cursor: pointer !important;
 
       p, h4, i {
         color: $font-color !important;

@@ -1,8 +1,31 @@
 <template>
   <div id="app">
+    <CustomHeader />
     <router-view />
   </div>
 </template>
+
+<script>
+import CustomHeader from '@/components/shared/CustomHeader.vue'
+
+export default {
+  name: 'App',
+
+  components: {
+    CustomHeader
+  },
+
+  computed: {
+  },
+
+  data () {
+    return {
+    }
+  },
+
+  methods: {}
+}
+</script>
 
 <style lang="scss">
 @import "~buefy/dist/buefy.css";
