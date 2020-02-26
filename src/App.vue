@@ -2,17 +2,20 @@
   <div id="app">
     <CustomHeader />
     <router-view />
+    <CustomFooter />
   </div>
 </template>
 
 <script>
 import CustomHeader from '@/components/shared/CustomHeader.vue'
+import CustomFooter from '@/components/shared/CustomFooter.vue'
 
 export default {
   name: 'App',
 
   components: {
-    CustomHeader
+    CustomHeader,
+    CustomFooter
   },
 
   computed: {
