@@ -2,10 +2,10 @@
   <div class="education">
     <ul>
       <li class="li-section">
-        <h2>Passions</h2>
+        <h2><i class="icon-audio" /> Passions</h2>
       </li>
       <li class="li-section">
-        <h2>Languages</h2>
+        <h2><i class="icon-study" /> Languages</h2>
         <ul class="ul-languages">
           <li class="li-languages">
             <p class="languages-title">
@@ -71,6 +71,16 @@ export default {
     font-weight: bold;
     color: $blue-1;
     font-size: $h2-desktop-resume;
+
+    i {
+      font-weight: bold;
+      font-size: $h2-desktop-resume;
+      margin-right: 10px;
+    }
+
+    i::before {
+      color: $blue-1;
+    }
   }
 
   ul {

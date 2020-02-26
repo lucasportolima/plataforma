@@ -3,12 +3,12 @@
     <ul>
       <li>
         <div>
-          <img src="~@/assets/images/audio.svg" alt="">
+          <i class="icon-audio" />
         </div>
       </li>
       <li>
         <div>
-          <img src="~@/assets/images/study.svg" alt="">
+          <i class="icon-study" />
         </div>
       </li>
     </ul>
@@ -44,17 +44,18 @@ export default {
       div {
         position: relative;
 
-        img {
-          width: 120px;
+        i {
+          font-size: 120px;
           position: absolute;
           right: 0;
+          cursor: pointer;
         }
       }
     }
 
     li:last-of-type {
       div {
-        img {
+        i {
           top: 160px;
         }
       }
