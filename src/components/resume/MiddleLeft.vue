@@ -49,6 +49,21 @@ export default {
           position: absolute;
           right: 0;
           cursor: pointer;
+          transition: color 2s, font-size 1s;
+
+          &::before {
+            transition: color 2s;
+            color: $font-color;
+          }
+        }
+
+        i:hover {
+          color: $blue-2;
+          font-size: 132px;
+
+          &::before {
+            color: $blue-2 !important;
+          }
         }
       }
     }
