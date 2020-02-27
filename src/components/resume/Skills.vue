@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <h2><i class="icon-clicker" /> Skills</h2>
+    <h2><i class="icon-clicker" /> {{ $t('topics.skills') }}</h2>
     <BulmaAccordion
       class="my-accordion"
       dropdown

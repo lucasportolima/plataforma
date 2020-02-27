@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <h2><i class="icon-electronics" /> Contact</h2>
+    <h2><i class="icon-electronics" /> {{ $t('topics.contact') }}</h2>
     <ul>
       <li class="columns">
         <div class="column is-2">
