@@ -4,7 +4,7 @@
     <ul>
       <li class="columns">
         <div class="column is-2">
-          <i class="icon-place" />
+          <i class="icon-location" />
         </div>
         <div class="column is-10">
           <p>Brasilia-DF Brasil</p>
@@ -121,6 +121,8 @@ export default {
         color: $font-color;
         position: relative;
         top: 2px;
+        cursor: pointer;
+        transition: color 2s;
       }
 
       p {
@@ -129,6 +131,15 @@ export default {
         text-align: justify;
         position: relative;
         left: -40px;
+        cursor: pointer;
+        transition: color 2s;
+      }
+    }
+
+    li:hover {
+      i, p {
+        color: $blue-2;
+        font-weight: bold;
       }
     }
   }

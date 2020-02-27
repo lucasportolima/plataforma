@@ -49,6 +49,21 @@ export default {
           right: 0;
           color: $font-color;
           cursor: pointer;
+          transition: color 2s, font-size 1s;
+
+          &::before {
+            transition: color 2s;
+            color: $font-color;
+          }
+        }
+
+        i:hover {
+          color: $blue-2;
+          font-size: 165px;
+
+          &::before {
+            color: $blue-2 !important;
+          }
         }
       }
     }
@@ -57,6 +72,11 @@ export default {
       div {
         i {
           font-size: 260px;
+        }
+
+        i:hover {
+          color: $blue-2;
+          font-size: 286px;
         }
       }
     }
