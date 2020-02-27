@@ -1,3 +1,10 @@
 {
-  "message": "hello i18n !!"
+  "topics": {
+    "work-experience": "work experience",
+    "contact": "contact",
+    "passions": "passions",
+    "languages": "languages",
+    "education": "education",
+    "skills": "skills"
+  }
 }

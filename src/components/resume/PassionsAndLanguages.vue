@@ -2,10 +2,10 @@
   <div class="education">
     <ul>
       <li class="li-section">
-        <h2><i class="icon-audio" /> Passions</h2>
+        <h2><i class="icon-audio" /> {{ $t('topics.passions') }}</h2>
       </li>
       <li class="li-section">
-        <h2><i class="icon-study" /> Languages</h2>
+        <h2><i class="icon-study" /> {{ $t('topics.languages') }}</h2>
         <ul class="ul-languages">
           <li class="li-languages">
             <p class="languages-title">

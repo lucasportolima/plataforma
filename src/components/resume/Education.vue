@@ -1,6 +1,6 @@
 <template>
   <div class="education">
-    <h2><i class="icon-study" /> Education</h2>
+    <h2><i class="icon-study" /> {{ $t('topics.education') }}</h2>
     <ul>
       <li class="columns">
         <div class="column is-2">

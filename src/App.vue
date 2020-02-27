@@ -18,6 +18,10 @@ export default {
     CustomFooter
   },
 
+  beforeCreate () {
+    this.$root.$i18n.locale = localStorage.getItem('locale') ? localStorage.getItem('locale') : 'en'
+  },
+
   computed: {
   },
 
