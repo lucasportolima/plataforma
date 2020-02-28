@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 
 import createPersistedState from 'vuex-persistedstate'
 
+import resume from '@/store/modules/resume'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -43,16 +45,11 @@ export default new Vuex.Store({
     }
   },
   modules: {
+    resume: resume
   },
   plugins: [createPersistedState({
     key: 'EMBP',
     paths: [
-      'currentPartner',
-      'partnerListings',
-      'assessmentsListings',
-      'currentNews',
-      'newsListings',
-      'featureContents'
     ]
   })]
 })

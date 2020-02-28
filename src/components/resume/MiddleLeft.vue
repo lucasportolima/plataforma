@@ -3,12 +3,12 @@
     <ul>
       <li>
         <div>
-          <i class="icon-audio" />
+          <i @click="setTopicInFocus('passions')" class="icon-audio" />
         </div>
       </li>
       <li>
         <div>
-          <i class="icon-study" />
+          <i @click="setTopicInFocus('education')" class="icon-study" />
         </div>
       </li>
     </ul>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'MiddleLeft',
 
@@ -27,7 +29,9 @@ export default {
     }
   },
 
-  methods: {}
+  methods: {
+    ...mapActions(['setTopicInFocus'])
+  }
 }
 </script>
 

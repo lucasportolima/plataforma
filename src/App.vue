@@ -10,6 +10,8 @@
 import CustomHeader from '@/components/shared/CustomHeader.vue'
 import CustomFooter from '@/components/shared/CustomFooter.vue'
 
+import { mapActions } from 'vuex'
+
 export default {
   name: 'App',
 
@@ -22,7 +24,16 @@ export default {
     this.$root.$i18n.locale = localStorage.getItem('locale') ? localStorage.getItem('locale') : 'en'
   },
 
-  computed: {
+  created () {
+    this.setTopicInFocus('')
+  },
+
+  watch: {
+    async '$store.state.resume.topicInFocus' (a) {
+      await setTimeout(() => {
+        this.setTopicInFocus('')
+      }, 750)
+    }
   },
 
   data () {
@@ -30,7 +41,9 @@ export default {
     }
   },
 
-  methods: {}
+  methods: {
+    ...mapActions(['setTopicInFocus'])
+  }
 }
 </script>
 
