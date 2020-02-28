@@ -1,0 +1,102 @@
+<template>
+  <div
+    class="view-container"
+    :class="{active: topicInFocus === topic}"
+    :ref="topic"
+  >
+    <h2>
+      <i :class="icon" />
+      {{ title }}
+    </h2>
+    <div class="view-container__main">
+      <slot />
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'StandardViewContainer',
+
+  props: {
+    title: {
+      type: String,
+      default: () => '',
+      required: true
+    },
+
+    topic: {
+      type: String,
+      default: () => '',
+      required: true
+    },
+
+    icon: {
+      type: Object,
+      default: () => {},
+      required: true
+    }
+  },
+
+  computed: {
+    ...mapGetters({
+      topicInFocus: 'getTopicInFocus'
+    })
+  },
+
+  watch: {
+    '$store.state.resume.topicInFocus' (topicName) {
+      if (topicName) {
+        this.$nextTick(function () {
+          if (this.$refs[topicName]) {
+            console.log(this.$refs[topicName])
+            this.$refs[topicName].scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'smooth' })
+          }
+        })
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import "~@/assets/stylesheets/styleguide";
+
+.view-container {
+  h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $blue-1;
+    font-size: $h2-desktop-resume;
+    transition: color 2s, font-size 1s;
+
+    i {
+      font-weight: bold;
+      font-size: $h2-desktop-resume;
+      margin-right: 10px;
+      transition: color 2s, font-size 1s;
+    }
+
+    i::before {
+      transition: color 2s;
+      color: $blue-1;
+    }
+  }
+}
+
+.active {
+  h2 {
+    color: $blue-2;
+    font-size: 30px !important;
+    i {
+      font-size: 30px !important;
+
+      &::before {
+        color: $blue-2 !important;
+      }
+    }
+  }
+}
+</style>

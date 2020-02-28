@@ -3,7 +3,7 @@
     <ul>
       <li>
         <div>
-          <i class="icon-work" />
+          <i @click="setTopicInFocus('work-experience')" class="icon-work" />
         </div>
       </li>
       <li>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'MiddleCenter',
 
@@ -27,7 +29,9 @@ export default {
     }
   },
 
-  methods: {}
+  methods: {
+    ...mapActions(['setTopicInFocus'])
+  }
 }
 </script>
 
