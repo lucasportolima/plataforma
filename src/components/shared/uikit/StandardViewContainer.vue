@@ -24,7 +24,7 @@ export default {
     title: {
       type: String,
       default: () => '',
-      required: true
+      required: false
     },
 
     topic: {
@@ -36,7 +36,7 @@ export default {
     icon: {
       type: Object,
       default: () => {},
-      required: true
+      required: false
     }
   },
 
@@ -51,7 +51,6 @@ export default {
       if (topicName) {
         this.$nextTick(function () {
           if (this.$refs[topicName]) {
-            console.log(this.$refs[topicName])
             this.$refs[topicName].scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'smooth' })
           }
         })
@@ -97,6 +96,10 @@ export default {
         color: $blue-2 !important;
       }
     }
+  }
+
+  .border-spacing {
+    border: 5px solid $blue-2 !important;
   }
 }
 </style>

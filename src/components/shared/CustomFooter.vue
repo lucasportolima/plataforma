@@ -6,7 +6,7 @@
           Desenvolvido em <strong>Brasília-DF</strong>,
           <strong>Brasil</strong> com o
           <strong class="heart">&#x2764;</strong> por
-          <strong>Lucas Porto</strong>.
+          <strong @click="setTopicInFocus('about-me')">Lucas Porto</strong>.
         </p>
         <p>
           <strong>Copyright &copy; 2020</strong>
@@ -17,8 +17,14 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
-  name: 'CustomFooter'
+  name: 'CustomFooter',
+
+  methods: {
+    ...mapActions(['setTopicInFocus'])
+  }
 }
 </script>
 
@@ -39,6 +45,10 @@ footer {
   p:first-of-type {
     .heart {
       color: red;
+    }
+
+    strong:last-of-type {
+      cursor: pointer;
     }
   }
 

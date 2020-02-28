@@ -3,17 +3,17 @@
     <ul>
       <li>
         <div>
-          <i class="icon-portrait" />
+          <i @click="setTopicInFocus('about-me')" class="icon-portrait" />
         </div>
       </li>
       <li>
         <div>
-          <i class="icon-electronics" />
+          <i @click="setTopicInFocus('contact')" class="icon-electronics" />
         </div>
       </li>
       <li>
         <div>
-          <i class="icon-clicker" />
+          <i @click="setTopicInFocus('skills')" class="icon-clicker" />
         </div>
       </li>
     </ul>
@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'MiddleRight',
 
@@ -32,7 +34,9 @@ export default {
     }
   },
 
-  methods: {}
+  methods: {
+    ...mapActions(['setTopicInFocus'])
+  }
 }
 </script>
 

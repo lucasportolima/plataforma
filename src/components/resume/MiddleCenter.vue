@@ -8,7 +8,7 @@
       </li>
       <li>
         <div>
-          <i class="icon-laptop" />
+          <i class="icon-laptop" style="cursor: none;" />
         </div>
       </li>
     </ul>
