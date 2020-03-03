@@ -1,1 +1,10 @@
-{}
+{
+    "topics": {
+      "work-experience": "expérience professionnelle",
+      "contact": "contact",
+      "passions": "passions",
+      "languages": "langues",
+      "education": "éducation",
+      "skills": "compétences"
+    }
+  }

@@ -111,8 +111,6 @@ ul {
       color: $font-color;
       position: relative;
       top: 2px;
-      cursor: pointer;
-      transition: color 2s;
     }
 
     p {
@@ -122,13 +120,11 @@ ul {
       position: relative;
       left: -40px;
       cursor: pointer;
-      transition: color 2s;
     }
   }
 
   li:hover {
     i, p {
-      color: $blue-2;
       font-weight: bold;
     }
   }

@@ -67,7 +67,7 @@ export default {
   h2 {
     text-transform: uppercase;
     font-weight: bold;
-    color: $blue-1;
+    color: var(--primary-blue-color);
     font-size: $h2-desktop-resume;
     transition: color 2s, font-size 1s;
 
@@ -80,26 +80,26 @@ export default {
 
     i::before {
       transition: color 2s;
-      color: $blue-1;
+      color: var(--primary-blue-color);
     }
   }
 }
 
 .active {
   h2 {
-    color: $blue-2;
+    color: var(--secondary-blue-color);
     font-size: 30px !important;
     i {
       font-size: 30px !important;
 
       &::before {
-        color: $blue-2 !important;
+        color: var(--secondary-blue-color) !important;
       }
     }
   }
 
   .border-spacing {
-    border: 5px solid $blue-2 !important;
+    border: 5px solid var(--secondary-blue-color) !important;
   }
 }
 </style>

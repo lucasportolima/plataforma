@@ -103,8 +103,9 @@ ul {
       margin-top: 15px;
 
       .languages-title {
-        color: $blue-2;
+        color: var(--secondary-blue-color);
         font-weight: bold;
+        transition: color 2s;
 
         img {
           width: 20px;
