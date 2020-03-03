@@ -93,8 +93,9 @@ export default {
   float: right;
 
   .my-accordion-item {
-    background-color: $gray-1;
+    background-color: var(--primary-gray-color);
     border-bottom: 1px solid $font-color;
+    transition: background-color 2s;
 
     ul {
       li {
@@ -110,30 +111,35 @@ export default {
     }
 
     progress {
-      background-color: $gray-1;
-      border: 1px solid $blue-2;
+      background-color: var(--primary-gray-color);
+      border: 1px solid var(--secondary-blue-color);
+      transition: background-color 2s, border 2s;
     }
 
     progress::-moz-progress-bar {
-      background: $gray-1;
-      border: 1px solid $blue-2;
-      box-shadow: inset 25px 0px 60px -15px $blue-2, 25px 0px 60px -15px $blue-2;
+      background: var(--primary-gray-color);
+      border: 1px solid var(--secondary-blue-color);
+      box-shadow: inset 25px 0px 60px -15px var(--secondary-blue-color), 25px 0px 60px -15px var(--secondary-blue-color);
+      transition: background-color 2s, border 2s, box-shadow 2s;
     }
 
     progress::-webkit-progress-bar {
-      background: $gray-1;
-      border: 1px solid $blue-2;
-      box-shadow: inset 25px 0px 60px -15px $blue-2, 25px 0px 60px -15px $blue-2;
+      background: var(--primary-gray-color);
+      border: 1px solid var(--secondary-blue-color);
+      box-shadow: inset 25px 0px 60px -15px var(--secondary-blue-color), 25px 0px 60px -15px var(--secondary-blue-color);
+      transition: background-color 2s, border 2s, box-shadow 2s;
     }
 
     progress::-moz-progress-value {
       border-radius: 0px;
-      background: $blue-2;
+      background: var(--secondary-blue-color);
+      transition: background-color 2s;
     }
 
     progress::-webkit-progress-value {
       border-radius: 0px;
-      background: $blue-2;
+      background: var(--secondary-blue-color);
+      transition: background-color 2s;
     }
   }
 }

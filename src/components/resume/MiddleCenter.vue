@@ -62,11 +62,11 @@ export default {
         }
 
         i:hover {
-          color: $blue-2;
+          color: var(--secondary-blue-color);
           font-size: 165px;
 
           &::before {
-            color: $blue-2 !important;
+            color: var(--secondary-blue-color) !important;
           }
         }
       }
@@ -79,7 +79,7 @@ export default {
         }
 
         i:hover {
-          color: $blue-2;
+          color: var(--secondary-blue-color);
           font-size: 286px;
         }
       }

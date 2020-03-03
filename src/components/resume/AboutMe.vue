@@ -61,13 +61,14 @@ ul {
   transition: border 2s;
 
   .my-photo {
-    background-color: $blue-2;
+    background-color: var(--secondary-blue-color);
     width: 96%;
     height: 96%;
     border-radius: 100%;
     position: relative;
     top: 3.5px;
     left: 3.5px;
+    transition: background-color 2s;
 
     img {
       width: 94%;

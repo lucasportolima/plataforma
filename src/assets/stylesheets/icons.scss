@@ -232,13 +232,13 @@
     color: #e8e8e8;
   }
 }
-.icon-england .path1 {
+.icon-england {
   &:before {
     content: $icon-england-path1;  
     color: rgb(240, 240, 240);
   }
 }
-.icon-england .path2 {
+.icon-england2 {
   &:before {
     content: $icon-england-path2;  
     margin-left: -1em;  
@@ -837,8 +837,7 @@
 }
 .icon-tag {
   &:before {
-    content: $icon-tag;     
-    color: #4599ca;
+    content: $icon-tag;
   }
 }
 .icon-work {

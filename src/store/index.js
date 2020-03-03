@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
 import resume from '@/store/modules/resume'
+import styleModes from '@/store/modules/style-modes'
 
 Vue.use(Vuex)
 
@@ -45,11 +46,13 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    resume: resume
+    resume: resume,
+    styleModes: styleModes
   },
   plugins: [createPersistedState({
     key: 'EMBP',
     paths: [
+      'styleModes'
     ]
   })]
 })

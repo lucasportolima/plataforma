@@ -1,7 +1,8 @@
 <template>
   <div class="marker">
-    <img src="~@/assets/images/tag.svg" alt="">
-    <span>{{ year }}</span>
+    <i class="icon-tag">
+      <span>{{ year }}</span>
+    </i>
   </div>
 </template>
 
@@ -38,12 +39,20 @@ export default {
   padding: 1px 5px;
   position: relative;
 
+  i {
+    color: var(--secondary-blue-color);
+    font-size: 40px;
+    transition: color 2s;
+  }
+
   span {
-    color: $gray-1;
+    color: var(--primary-gray-color);
     font-weight: bold;
     position: relative;
-    top: -39px;
-    right: -3px;
+    top: -12px;
+    right: 36px;
+    font-size: 14px;
+    transition: color 2s;
   }
 }
 </style>

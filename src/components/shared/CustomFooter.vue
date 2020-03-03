@@ -32,13 +32,15 @@ export default {
 @import "~@/assets/stylesheets/styleguide";
 
 footer {
-  background-color: $gray-1;
+  background-color: var(--primary-gray-color);
+  transition: background-color 2s;
 
   p {
     color: $font-color;
 
     strong {
-      color: $blue-2;
+      color: var(--secondary-blue-color);
+      transition: color 2s;
     }
   }
 
