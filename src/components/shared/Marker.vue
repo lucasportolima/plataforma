@@ -46,7 +46,7 @@ export default {
   }
 
   span {
-    color: var(--primary-gray-color);
+    color: var(--background-color);
     font-weight: bold;
     position: relative;
     top: -12px;

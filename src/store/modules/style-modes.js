@@ -4,11 +4,15 @@ const state = {
   styleModes: {
     dark: {
       gray: '#2b2b2b',
-      blue: '#337093'
+      blue: '#337093',
+      background: '#2b2b2b',
+      fontColor: '#e8e8e8'
     },
     light: {
       gray: '#515151',
-      blue: '#4599ca'
+      blue: '#4599ca',
+      background: '#e8e8e8',
+      fontColor: '#2b2b2b'
     }
   },
   styleModeSelected: 'dark'

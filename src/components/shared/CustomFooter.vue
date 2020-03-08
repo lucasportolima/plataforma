@@ -32,11 +32,11 @@ export default {
 @import "~@/assets/stylesheets/styleguide";
 
 footer {
-  background-color: var(--primary-gray-color);
+  background-color: var(--background-color);
   transition: background-color 2s;
 
   p {
-    color: $font-color;
+    color: var(--font-color);
 
     strong {
       color: var(--secondary-blue-color);
@@ -58,7 +58,7 @@ footer {
     font-size: 12px;
 
     strong {
-      color: $font-color;
+      color: var(--font-color);
     }
   }
 }

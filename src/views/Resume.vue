@@ -79,7 +79,7 @@ export default {
 @import "~@/assets/stylesheets/styleguide";
 
 .resume {
-  background-color: var(--primary-gray-color);
+  background-color: var(--background-color);
   padding: 25px;
   padding-top: 100px;
   transition: background-color 2s;

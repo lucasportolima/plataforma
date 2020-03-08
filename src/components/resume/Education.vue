@@ -73,7 +73,7 @@ ul {
     }
 
     p {
-      color: $font-color;
+      color: var(--font-color);
       line-height: 22px;
       text-align: justify;
     }

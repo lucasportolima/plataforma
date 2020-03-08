@@ -108,13 +108,13 @@ ul {
     height: 30px;
 
     i {
-      color: $font-color;
+      color: var(--font-color);
       position: relative;
       top: 2px;
     }
 
     p {
-      color: $font-color;
+      color: var(--font-color);
       line-height: 22px;
       text-align: justify;
       position: relative;
@@ -133,6 +133,6 @@ ul {
 hr {
   width: 80%;
   margin: 40px auto 0px auto;
-  background: rgba($color: $font-color, $alpha: 0.6)
+  background: rgba($color: var(--font-color), $alpha: 0.6)
 }
 </style>

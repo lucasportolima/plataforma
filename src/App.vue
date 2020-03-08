@@ -63,7 +63,9 @@ export default {
         '--primary-gray-color': this.styleModeSelected.primary.gray,
         '--primary-blue-color': this.styleModeSelected.primary.blue,
         '--secondary-gray-color': this.styleModeSelected.secondary.gray,
-        '--secondary-blue-color': this.styleModeSelected.secondary.blue
+        '--secondary-blue-color': this.styleModeSelected.secondary.blue,
+        '--background-color': this.styleModeSelected.primary.background,
+        '--font-color': this.styleModeSelected.primary.fontColor
       }
     }
   }
