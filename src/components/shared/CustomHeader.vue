@@ -96,7 +96,7 @@
               v-model="modeSelect"
               :labels="{ checked: 'Dark', unchecked: 'Light' }"
               :switch-color="{ checked: '#337093', unchecked: '#4599ca' }"
-              :color="{ checked: '#2b2b2b', unchecked: '#515151' }"
+              :color="{ checked: '#2b2b2b', unchecked: '#e8e8e8' }"
               :width="65"
               :height="25"
               :font-size="12"
@@ -174,7 +174,7 @@ export default {
   position: fixed;
   width: 100%;
   z-index: 10;
-  border-bottom: 1px solid $font-color;
+  border-bottom: 1px solid var(--font-color);
 
   .navbar {
     background-color: var(--primary-gray-color);
@@ -197,7 +197,7 @@ export default {
   .navbar-menu {
     .navbar-end {
       .navbar-item {
-        color: $font-color;
+        color: #e8e8e8;
         font-weight: bold;
         cursor: pointer;
 
@@ -206,7 +206,7 @@ export default {
             .label-dropdown-trigger {
               background: none;
               border: none;
-              color: $font-color;
+              color: #e8e8e8;
               font-weight: bold;
               font-size: 16px;
 
@@ -267,6 +267,11 @@ export default {
               }
             }
           }
+        }
+
+        // toggle style modes
+        /deep/.v-switch-label {
+          color: var(--font-color) !important;
         }
       }
       .navbar-item:hover {

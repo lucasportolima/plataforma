@@ -56,7 +56,7 @@ ul {
   width: 200px;
   height: 185px;
   border-radius: 100%;
-  border: 1px solid rgba($color: $font-color, $alpha: 0.6);
+  border: 1px solid var(--font-color);
   margin: auto;
   transition: border 2s;
 
@@ -83,7 +83,7 @@ ul {
 }
 
 p {
-  color: $font-color;
+  color: var(--font-color);
   line-height: 22px;
   text-align: justify;
   width: 70%;

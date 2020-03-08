@@ -51,13 +51,13 @@ export default {
           text-align: center;
           display: block;
           right: 0;
-          color: $font-color;
+          color: var(--font-color);
           cursor: pointer;
           transition: color 2s, font-size 1s;
 
           &::before {
             transition: color 2s;
-            color: $font-color;
+            color: var(--font-color);
           }
         }
 

@@ -57,7 +57,7 @@ export default {
 
           &::before {
             transition: color 2s;
-            color: $font-color;
+            color: var(--font-color);
           }
         }
 

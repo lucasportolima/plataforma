@@ -93,15 +93,15 @@ export default {
   float: right;
 
   .my-accordion-item {
-    background-color: var(--primary-gray-color);
-    border-bottom: 1px solid $font-color;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--font-color);
     transition: background-color 2s;
 
     ul {
       li {
         p {
           margin-bottom: 10px;
-          color: $font-color;
+          color: var(--font-color);
         }
       }
 
@@ -159,7 +159,7 @@ export default {
       cursor: pointer !important;
 
       p, h4, i {
-        color: $font-color !important;
+        color: var(--font-color) !important;
         font-weight: bold !important;
       }
     }
