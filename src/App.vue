@@ -22,7 +22,8 @@ export default {
 
   computed: {
     ...mapGetters({
-      styleModeSelected: 'getStyleModeSelected'
+      styleModeSelected: 'getStyleModeSelected',
+      modeSelected: 'getModeSelected'
     })
   },
 
@@ -36,6 +37,7 @@ export default {
 
   mounted () {
     this.setAppStyle()
+    this.setScrollBarStyle()
   },
 
   watch: {
@@ -46,6 +48,7 @@ export default {
     },
     styleModeSelected: function () {
       this.setAppStyle()
+      this.setScrollBarStyle()
     }
   },
 
@@ -67,6 +70,15 @@ export default {
         '--background-color': this.styleModeSelected.primary.background,
         '--font-color': this.styleModeSelected.primary.fontColor
       }
+    },
+
+    setScrollBarStyle () {
+      document.getElementsByTagName('html')[0].classList = []
+      if (this.modeSelected === 'dark') {
+        document.getElementsByTagName('html')[0].classList.add('dark-mode')
+      } else {
+        document.getElementsByTagName('html')[0].classList.add('light-mode')
+      }
     }
   }
 }
@@ -77,16 +89,30 @@ export default {
 @import "~@/assets/stylesheets/styleguide";
 @import "~@/assets/stylesheets/icons";
 
-::-webkit-scrollbar {
+.light-mode::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: $font-color;
+  transition: background-color 2s;
+}
+
+.light-mode::-webkit-scrollbar-thumb {
+  border-spacing: 10px 10px;
+  background-color: #546874;
+  transition: background-color 2s;
+}
+
+.dark-mode::-webkit-scrollbar {
   width: 8px;
   height: 8px;
   background-color: $gray-1;
+  transition: background-color 2s;
 }
 
-::-webkit-scrollbar-thumb {
+.dark-mode::-webkit-scrollbar-thumb {
   border-spacing: 10px 10px;
-  -webkit-box-shadow: inset 0 0 1000px $gray-1;
-  background-color: $blue-1;
+  background-color: #2e4959;
+  transition: background-color 2s;
 }
 
 html,
