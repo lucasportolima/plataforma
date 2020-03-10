@@ -5,9 +5,6 @@
         <div class="navbar-item">
           <img src="~@/assets/images/LogoLucas.svg" alt="Logo">
         </div>
-        <!--
-    Using the v-on: directive to listen for the click event and toggle the data property showNav. Also, using the v-bind: directive to reactively update the class attribute 'is-active' based on the showNav property.
-    -->
         <div
           class="navbar-burger"
           @click="showNav = !showNav"
@@ -18,9 +15,6 @@
           <span />
         </div>
       </div>
-      <!--
-    Using the v-bind: directive to reactively update the class attribute 'is-active' based on the showNav property.
-    -->
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-end">
           <span class="navbar-item">
@@ -93,6 +87,7 @@
           </span>
           <span class="navbar-item">
             <toggle-button
+              v-if="modeSelect !== undefined"
               v-model="modeSelect"
               :labels="{ checked: 'Dark', unchecked: 'Light' }"
               :switch-color="{ checked: '#337093', unchecked: '#4599ca' }"
@@ -119,7 +114,8 @@ export default {
 
   computed: {
     ...mapGetters({
-      modeSelected: 'getModeSelected'
+      modeSelected: 'getModeSelected',
+      isDarkModeSelected: 'isDarkModeSelected'
     }),
 
     locale () {
@@ -136,16 +132,14 @@ export default {
   },
 
   mounted () {
-    this.modeSelected === 'dark'
-      ? this.modeSelect = true
-      : this.modeSelect = false
+    this.modeSelect = this.isDarkModeSelected
   },
 
   data () {
     return {
       showNav: false,
       showDropdownLanguages: false,
-      modeSelect: this.modeSelected === 'dark'
+      modeSelect: undefined
     }
   },
 

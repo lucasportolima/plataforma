@@ -32,7 +32,8 @@ const getters = {
       secondary: state.styleModes[secondaryMode]
     }
   },
-  getModeSelected: state => state.styleModeSelected
+  getModeSelected: state => state.styleModeSelected,
+  isDarkModeSelected: state => state.styleModeSelected === 'dark'
 }
 
 export const actions = {
