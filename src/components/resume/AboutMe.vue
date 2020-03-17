@@ -88,5 +88,6 @@ p {
   text-align: justify;
   width: 70%;
   margin: auto;
+  transition: color 2s;
 }
 </style>

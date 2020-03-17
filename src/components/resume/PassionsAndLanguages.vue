@@ -86,6 +86,7 @@ ul {
       color: var(--font-color);
       line-height: 22px;
       text-align: justify;
+      transition: color 2s;
     }
   }
 

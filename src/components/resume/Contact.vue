@@ -111,6 +111,8 @@ ul {
       color: var(--font-color);
       position: relative;
       top: 2px;
+      cursor: pointer;
+      transition: color 2s;
     }
 
     p {
@@ -120,6 +122,7 @@ ul {
       position: relative;
       left: -40px;
       cursor: pointer;
+      transition: color 2s;
     }
   }
 
@@ -133,6 +136,7 @@ ul {
 hr {
   width: 80%;
   margin: 40px auto 0px auto;
-  background: rgba($color: var(--font-color), $alpha: 0.6)
+  background-color: var(--font-color);
+  transition: background-color 2s;
 }
 </style>

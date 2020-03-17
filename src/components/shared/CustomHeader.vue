@@ -90,7 +90,7 @@
               v-if="modeSelect !== undefined"
               v-model="modeSelect"
               :labels="{ checked: 'Dark', unchecked: 'Light' }"
-              :switch-color="{ checked: '#337093', unchecked: '#4599ca' }"
+              :switch-color="{ checked: '#2e4959', unchecked: '#546874' }"
               :color="{ checked: '#2b2b2b', unchecked: '#e8e8e8' }"
               :width="65"
               :height="25"
@@ -169,6 +169,7 @@ export default {
   width: 100%;
   z-index: 10;
   border-bottom: 1px solid var(--font-color);
+  transition: border-bottom-color 2s;
 
   .navbar {
     background-color: var(--primary-gray-color);
@@ -264,8 +265,17 @@ export default {
         }
 
         // toggle style modes
+        /deep/.v-switch-core {
+          transition: background-color 2s !important;
+        }
+
         /deep/.v-switch-label {
           color: var(--font-color) !important;
+          transition: color 2s;
+        }
+
+        /deep/.v-switch-button {
+          transition: transform 500ms ease 0s, background-color 2s !important;
         }
       }
       .navbar-item:hover {

@@ -95,13 +95,14 @@ export default {
   .my-accordion-item {
     background-color: var(--background-color);
     border-bottom: 1px solid var(--font-color);
-    transition: background-color 2s;
+    transition: background-color 2s, border-bottom-color 2s;
 
     ul {
       li {
         p {
           margin-bottom: 10px;
           color: var(--font-color);
+          transition: color 2s;
         }
       }
 
@@ -132,7 +133,7 @@ export default {
 
     progress::-moz-progress-value {
       border-radius: 0px;
-      background: var(--secondary-blue-color);
+      background-color: var(--secondary-blue-color);
       transition: background-color 2s;
     }
 
@@ -158,7 +159,13 @@ export default {
       box-shadow: none !important;
       cursor: pointer !important;
 
-      p, h4, i {
+      .card-header-title {
+        color: var(--font-color) !important;
+        font-weight: bold !important;
+        transition: color 2s;
+      }
+
+      .card-header-icon {
         color: var(--font-color) !important;
         font-weight: bold !important;
       }
