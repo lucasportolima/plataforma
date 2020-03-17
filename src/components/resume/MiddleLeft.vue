@@ -49,9 +49,10 @@ export default {
         position: relative;
 
         i {
-          font-size: 120px;
+          font-size: 160px;
           position: absolute;
           right: 0;
+          top: -60px;
           cursor: pointer;
           transition: color 2s, font-size 1s;
 
@@ -63,7 +64,7 @@ export default {
 
         i:hover {
           color: var(--secondary-blue-color);
-          font-size: 132px;
+          font-size: 176px;
 
           &::before {
             color: var(--secondary-blue-color) !important;
@@ -75,7 +76,7 @@ export default {
     li:last-of-type {
       div {
         i {
-          top: 160px;
+          top: 145px;
         }
       }
     }
