@@ -6,13 +6,15 @@ const state = {
       gray: '#2b2b2b',
       blue: '#337093',
       background: '#2b2b2b',
-      fontColor: '#e8e8e8'
+      fontColor: '#e8e8e8',
+      blueShadow: '#2e4959'
     },
     light: {
       gray: '#515151',
       blue: '#4599ca',
       background: '#e8e8e8',
-      fontColor: '#2b2b2b'
+      fontColor: '#2b2b2b',
+      blueShadow: '#546874'
     }
   },
   styleModeSelected: 'dark'
