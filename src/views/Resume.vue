@@ -24,13 +24,18 @@
     </section>
     <section class="down columns">
       <div class="column is-4">
-        <PassionsAndLanguages />
+        <Languages />
       </div>
       <div class="column is-4">
         <Education />
       </div>
       <div class="column is-4">
         <Skills />
+      </div>
+    </section>
+    <section class="passions columns">
+      <div class="column is-12">
+        <Passions />
       </div>
     </section>
   </main>
@@ -42,7 +47,8 @@ import AboutMe from '@/components/resume/AboutMe.vue'
 import MiddleLeft from '@/components/resume/MiddleLeft.vue'
 import MiddleRight from '@/components/resume/MiddleRight.vue'
 import MiddleCenter from '@/components/resume/MiddleCenter.vue'
-import PassionsAndLanguages from '@/components/resume/PassionsAndLanguages.vue'
+import Languages from '@/components/resume/Languages.vue'
+import Passions from '@/components/resume/Passions.vue'
 import Education from '@/components/resume/Education.vue'
 import Contact from '@/components/resume/Contact.vue'
 import Skills from '@/components/resume/Skills.vue'
@@ -56,7 +62,8 @@ export default {
     MiddleLeft,
     MiddleRight,
     MiddleCenter,
-    PassionsAndLanguages,
+    Languages,
+    Passions,
     Education,
     Contact,
     Skills
@@ -67,7 +74,7 @@ export default {
 
   data () {
     return {
-      name: 'lucas'
+      name: 'Resume'
     }
   },
 
@@ -86,6 +93,16 @@ export default {
 
   .middle {
     margin-bottom: 30px;
+  }
+
+  .passions.columns {
+    width: 100vw;
+    padding: 0;
+    margin: 30px -25px 0px;
+
+    div.column.is-12 {
+      padding: 0;
+    }
   }
 
 }

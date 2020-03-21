@@ -2,13 +2,6 @@
   <ul>
     <li class="li-section">
       <standard-view-container
-        :title="$t('topics.passions')"
-        :icon="{'icon-audio': true}"
-        :topic="'passions'"
-      />
-    </li>
-    <li class="li-section">
-      <standard-view-container
         :title="$t('topics.languages')"
         :icon="{'icon-study': true}"
         :topic="'education'"
@@ -88,13 +81,7 @@ ul {
       text-align: justify;
       transition: color 2s;
     }
-  }
 
-  .li-section:first-of-type {
-    margin-bottom: 25px;
-  }
-
-  .li-section:last-of-type {
     .ul-languages {
       width: calc(100% - 5px);
       float: right;

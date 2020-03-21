@@ -68,6 +68,7 @@ export default {
         '--secondary-gray-color': this.styleModeSelected.secondary.gray,
         '--secondary-blue-color': this.styleModeSelected.secondary.blue,
         '--background-color': this.styleModeSelected.primary.background,
+        '--blue-shadow': this.styleModeSelected.primary.blueShadow,
         '--font-color': this.styleModeSelected.primary.fontColor
       }
     },

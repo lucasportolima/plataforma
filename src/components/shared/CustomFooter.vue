@@ -123,7 +123,7 @@ footer {
     }
 
     li:last-of-type {
-      margin-top: 100px;
+      margin-top: 72.5px;
 
       p {
         color: var(--font-color);
