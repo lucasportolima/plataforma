@@ -36,6 +36,7 @@ export default {
   },
 
   mounted () {
+    this.setDevice(this.$vssWidth)
     this.setAppStyle()
     this.setScrollBarStyle()
   },
@@ -49,6 +50,9 @@ export default {
     styleModeSelected: function () {
       this.setAppStyle()
       this.setScrollBarStyle()
+    },
+    '$vssWidth' () {
+      this.setDevice(this.$vssWidth)
     }
   },
 
@@ -59,7 +63,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['setTopicInFocus']),
+    ...mapActions(['setTopicInFocus', 'setDevice']),
 
     setAppStyle () {
       this.appStyle = {

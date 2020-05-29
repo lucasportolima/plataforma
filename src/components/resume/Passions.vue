@@ -7,7 +7,7 @@
     >
       <template>
         <ul>
-          <li>
+          <li data-balloon-length="medium" aria-label="Família & Amigos" data-balloon-pos="up">
             <i class="icon-family" />
           </li>
           <li>
@@ -106,6 +106,7 @@ export default {
       border-radius: 5px;
       margin-left: 57.5px;
       transition: background-color 2s;
+      cursor: pointer;
 
       i {
         align-items: center;
@@ -123,6 +124,22 @@ export default {
     li:first-of-type {
       margin-left: 0px;
     }
+
+    [aria-label][data-balloon-pos][data-balloon-pos="up"]:after {
+      text-align: center !important;
+    }
+
+    [aria-label][data-balloon-pos][data-balloon-pos="up"]:hover:after {
+      color: var(--background-color);
+      text-align: center !important;
+      font-weight: bold;
+      background-color: var(--font-color);
+    }
+
+    [aria-label][data-balloon-pos]:before {
+      border-top-color: var(--font-color);
+    }
+
   }
 }
 </style>

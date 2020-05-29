@@ -41,7 +41,7 @@ export default {
 
   i {
     color: var(--secondary-blue-color);
-    font-size: 40px;
+    font-size: 45px;
     transition: color 2s;
   }
 
@@ -49,9 +49,9 @@ export default {
     color: var(--background-color);
     font-weight: bold;
     position: relative;
-    top: -12px;
-    right: 36px;
-    font-size: 14px;
+    top: -15px;
+    right: 41px;
+    font-size: 12px;
     transition: color 2s;
   }
 }

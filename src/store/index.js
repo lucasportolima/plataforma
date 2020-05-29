@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
 import resume from '@/store/modules/resume'
+import device from '@/store/modules/device'
 import styleModes from '@/store/modules/style-modes'
 
 Vue.use(Vuex)
@@ -47,6 +48,7 @@ export default new Vuex.Store({
   },
   modules: {
     resume: resume,
+    device: device,
     styleModes: styleModes
   },
   plugins: [createPersistedState({
