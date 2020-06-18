@@ -13,7 +13,7 @@
               <i class="icon-drawer" />
             </p>
           </li>
-          <li>
+          <li v-if="!isMobile">
             <p>
               Desenvolvido em <strong>Brasília-DF</strong>,
               <strong>Brasil</strong> com o
@@ -74,6 +74,17 @@
               </li>
             </ul>
           </li>
+          <li class="author-description" v-if="isMobile">
+            <p>
+              Desenvolvido em <strong>Brasília-DF</strong>,
+              <strong>Brasil</strong> com o
+              <strong class="heart">&#x2764;</strong> por
+              <strong @click="setTopicInFocus('about-me')">Lucas Porto</strong>.
+            </p>
+            <p>
+              <strong>Copyright &copy; 2020</strong>
+            </p>
+          </li>
         </ul>
       </div>
     </div>
@@ -81,13 +92,19 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'CustomFooter',
 
   methods: {
     ...mapActions(['setTopicInFocus'])
+  },
+
+  computed: {
+    ...mapGetters({
+      isMobile: 'isMobile'
+    })
   }
 }
 </script>
@@ -192,6 +209,100 @@ footer {
 
           li:hover {
             font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile
+@media only screen and (max-width: 400px) {
+  .footer {
+    ul {
+      margin-top: -35px;
+      li {
+        h3, p {
+          text-align: center !important;
+
+          i {
+            font-size: 20px !important;
+            margin: 0px 10px !important;
+          }
+        }
+      }
+      li:last-of-type {
+        margin-top: 0px !important;
+      }
+    }
+
+    .sitemap {
+      float: none;
+      background-color: var(--background-color);
+      transition: background-color 2s;
+      display: inline-flex;
+      width: 100%;
+      margin: auto;
+      margin-top: -10px;
+
+      ul {
+        margin-top: 10px;
+        display: inline-block;
+        width: 100%;
+
+        li {
+          width: 100%;
+          margin: 0;
+
+          h3 {
+            text-align: center !important;
+            margin: auto;
+          }
+
+          ul {
+            li {
+              text-align: center;
+              font-weight: bold;
+            }
+            li:last-of-type {
+              margin-top: 0px !important;
+              margin-bottom: 25px;
+            }
+          }
+        }
+
+        .author-description {
+          position: relative;
+          top: 20px;
+
+          p {
+            color: var(--font-color);
+            text-align: left;
+            transition: color 2s;
+
+            strong {
+              color: var(--secondary-blue-color);
+              transition: color 2s;
+            }
+          }
+
+          p:first-of-type {
+            .heart {
+              color: red;
+            }
+
+            strong:last-of-type {
+              cursor: pointer;
+            }
+          }
+
+          p:last-of-type {
+            font-size: 12px;
+
+            strong {
+              color: var(--font-color);
+              transition: color 2s;
+            }
           }
         }
       }

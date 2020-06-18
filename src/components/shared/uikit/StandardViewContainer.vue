@@ -1,10 +1,13 @@
 <template>
   <div
     class="view-container"
-    :class="{active: topicInFocus === topic}"
+    :class="{
+      active: topicInFocus === topic,
+      'view-container__skills': topic === 'skills'
+    }"
     :ref="topic"
   >
-    <h2>
+    <h2 :class="{'h2__passions': topic === 'passions'}">
       <i :class="icon" />
       {{ title }}
     </h2>
@@ -85,6 +88,10 @@ export default {
   }
 }
 
+.view-container__skills {
+  overflow: hidden;
+}
+
 .active {
   h2 {
     color: var(--secondary-blue-color);
@@ -100,6 +107,13 @@ export default {
 
   .border-spacing {
     border: 5px solid var(--secondary-blue-color) !important;
+  }
+}
+
+// Mobile
+@media only screen and (max-width: 400px) {
+  .h2__passions {
+    display: none;
   }
 }
 </style>

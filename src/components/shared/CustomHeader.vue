@@ -399,16 +399,24 @@ export default {
 }
 
 // Mobile
-@media only screen and (max-device-width: 376px) {
+@media only screen and (max-width: 400px) {
   .hero-head {
     width: 100vw;
 
     .navbar {
       .navbar-brand {
+        .navbar-burger:hover {
+          background-color: rgba(0, 0, 0, 0) !important;
+        }
+
         .navbar-item {
           img {
             left: -10px;
           }
+        }
+
+        .navbar-item:visited {
+          background-color: red;
         }
 
         .navbar-item-mobile {
@@ -426,6 +434,24 @@ export default {
 
         .navbar-item-mobile:nth-child(3) {
           right: 40px;
+        }
+      }
+    }
+
+    .dropdown-languages {
+      .dropdown-menu {
+        .dropdown-content {
+          .dropdown-item {
+            span {
+              font-weight: bold;
+              margin: 0;
+            }
+            img {
+              position: relative;
+              left: 0;
+              margin-right: 5px;
+            }
+          }
         }
       }
     }

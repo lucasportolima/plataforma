@@ -1,6 +1,6 @@
 <template>
   <main class="resume">
-    <section class="up columns">
+    <section v-if="!isMobile" class="up columns">
       <div class="column is-4">
         <WorkExperience />
       </div>
@@ -11,7 +11,18 @@
         <Contact />
       </div>
     </section>
-    <section class="middle columns">
+    <section v-if="isMobile" class="up columns">
+      <div class="column is-4">
+        <AboutMe />
+      </div>
+      <div class="column is-4">
+        <WorkExperience />
+      </div>
+      <div class="column is-4">
+        <Contact />
+      </div>
+    </section>
+    <section v-if="!isMobile" class="middle columns">
       <div class="column is-4">
         <MiddleLeft />
       </div>
@@ -53,6 +64,8 @@ import Education from '@/components/resume/Education.vue'
 import Contact from '@/components/resume/Contact.vue'
 import Skills from '@/components/resume/Skills.vue'
 
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Resume',
 
@@ -70,6 +83,9 @@ export default {
   },
 
   computed: {
+    ...mapGetters({
+      isMobile: 'isMobile'
+    })
   },
 
   data () {
@@ -105,5 +121,14 @@ export default {
     }
   }
 
+}
+
+// Mobile
+@media only screen and (max-width: 400px) {
+  .resume {
+    .up {
+      margin-top: -45px;
+    }
+  }
 }
 </style>
