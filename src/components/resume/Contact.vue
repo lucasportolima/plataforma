@@ -6,7 +6,7 @@
   >
     <template>
       <ul>
-        <li class="columns">
+        <li class="columns is-mobile">
           <div class="column is-2">
             <i class="icon-location" />
           </div>
@@ -14,7 +14,7 @@
             <p>Brasilia-DF Brasil</p>
           </div>
         </li>
-        <li class="columns">
+        <li class="columns is-mobile">
           <div class="column is-2">
             <i class="icon-phone" />
           </div>
@@ -22,7 +22,7 @@
             <p>(61) 98482-2244</p>
           </div>
         </li>
-        <li class="columns">
+        <li class="columns is-mobile">
           <div class="column is-2">
             <i class="icon-mail2" />
           </div>
@@ -33,7 +33,7 @@
       </ul>
       <hr>
       <ul>
-        <li class="columns">
+        <li class="columns is-mobile">
           <div class="column is-2">
             <i class="icon-instagram" />
           </div>
@@ -41,7 +41,7 @@
             <p>Instagram</p>
           </div>
         </li>
-        <li class="columns">
+        <li class="columns is-mobile">
           <div class="column is-2">
             <i class="icon-linkedin2" />
           </div>
@@ -49,7 +49,7 @@
             <p>linkedin</p>
           </div>
         </li>
-        <li class="columns">
+        <li class="columns is-mobile">
           <div class="column is-2">
             <i class="icon-github" />
           </div>
@@ -57,7 +57,7 @@
             <p>github</p>
           </div>
         </li>
-        <li class="columns">
+        <li class="columns is-mobile">
           <div class="column is-2">
             <i class="icon-blog" />
           </div>
@@ -65,7 +65,7 @@
             <p>blog</p>
           </div>
         </li>
-        <li class="columns">
+        <li class="columns is-mobile">
           <div class="column is-2">
             <i class="icon-drawer" />
           </div>
